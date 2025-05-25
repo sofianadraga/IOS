@@ -1,10 +1,3 @@
-//
-//  EmojiMemoryGame.swift
-//  Memorize
-//
-//  codes from CS193p Instructor, modified by Chenqin Zhang on 2024/03/19
-//
-
 import SwiftUI
 
 class EmojiMemoryGame: ObservableObject {
