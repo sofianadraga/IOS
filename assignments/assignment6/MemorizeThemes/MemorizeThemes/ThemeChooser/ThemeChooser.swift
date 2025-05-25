@@ -1,10 +1,3 @@
-//
-//  ThemeChooser.swift
-//  MemorizeThemes
-//
-//  Created by Chenqin zhang on 2024/3/31.
-//
-
 import Foundation
 
 
