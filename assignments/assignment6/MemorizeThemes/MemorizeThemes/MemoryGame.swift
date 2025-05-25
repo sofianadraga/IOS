@@ -1,16 +1,8 @@
-//
-//  MemorizeGame.swift
-//  Memorize
-//
-//  Codes from CS193p Instructor, modified by Chenqin Zhang on 2024/03/19
-//
-
 import Foundation
 
 struct MemoryGame<CardContent> where CardContent: Equatable {
     private(set) var cards: Array<Card>
     private(set) var score = 0
-    /* This variable is for checking does the mismatched pair of cards has been selected before this round or not */
     private var checkOAOCardSelected = false
     
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
@@ -56,9 +48,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
     }
     
-    /**
-            Check mismatched pair used to be selected or not, if any card in the pair have been selected, we deduct the score by 1
-     */
     mutating private func deductScore(_ chosenIndex: Int, _ potentialMatchIndex: Int) {
         if cards[chosenIndex].isSelected{
             score -= 1
@@ -70,7 +59,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     
     mutating func shuffle() {
         cards.shuffle()
-//        print(cards)
     }
     
     struct Card: Equatable, Identifiable, CustomDebugStringConvertible {
