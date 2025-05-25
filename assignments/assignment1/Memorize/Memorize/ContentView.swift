@@ -1,16 +1,9 @@
-//
-//  ContentView.swift
-//  Memorize
-//
-//  Codes from CS193P Instructor
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    @State var emojis = ["👻","🎃","🕷️","😈","💀","🕸️","🧙","🙀","👹","😱","☠️","🍭","👻","🎃","🕷️","😈","💀","🕸️","🧙","🙀","👹","😱","☠️","🍭"].shuffled()
+    @State var emojis = ["🌸","🌼","🌺","🌻","🌷","🌹","🌿","🍀","🍃","🪴","🌱","🌾","🌸","🌼","🌺","🌻","🌷","🌹","🌿","🍀","🍃","🪴","🌱","🌾"].shuffled()
     @State var cardCount: Int = 24
-    @State var themeColor = Color.orange
+    @State var themeColor = Color.pink
     
     var body: some View {
         VStack {
@@ -27,15 +20,14 @@ struct ContentView: View {
         .padding()
     }
     
-    
     var themeChosing : some View {
         HStack(alignment: .bottom) {
             Spacer()
-            themeButton(image: "theatermasks", themeTitle: "Halloween", themeColor: .orange, emojis: ["👻","🎃","🕷️","😈","💀","🕸️","🧙","🙀","👹","😱","☠️","🍭"])
+            themeButton(image: "leaf", themeTitle: "Nature", themeColor: .green, emojis: ["🌳","🌲","🍂","🍁","🌵","🌴","🪵","🪨","🌺","🌻","🍄","🌼"])
             Spacer()
-            themeButton(image: "figure.badminton", themeTitle: "Sports", themeColor: .red, emojis: ["🚲", "🏀", "🏸", "⛹️‍♀️", "🎾", "🏓", "🏑", "⚾️", "🏈", "🏊‍♀️", "🏄🏿‍♀️", "🚵"])
+            themeButton(image: "face.smiling", themeTitle: "Emotions", themeColor: .yellow, emojis: ["😀","😅","😂","😭","😡","😱","🥰","😴","🤢","😎","🤯","😇"])
             Spacer()
-            themeButton(image: "car", themeTitle: "Vehicle", themeColor: .blue, emojis: ["🚗", "🚖", "⛴️", "🚁", "🚚", "🚂", "🚀", "🚌", "🚑", "🚔", "🚜", "🚄"])
+            themeButton(image: "cup.and.saucer", themeTitle: "Food", themeColor: .red, emojis: ["🍎","🍕","🍩","🍣","🍪","🥦","🍗","🍇","🥗","🍞","🍫","🍰"])
             Spacer()
         }
         .imageScale(.large)
@@ -44,15 +36,11 @@ struct ContentView: View {
     
     func themeButton(image: String, themeTitle: String, themeColor: Color, emojis: [String]) -> some View {
         Button(action: {
-            
             let pairOfCards = Int.random(in: 2...12)
             self.cardCount = pairOfCards * 2
-            
             self.emojis = (emojis[..<pairOfCards] + emojis[..<pairOfCards]).shuffled()
             self.themeColor = themeColor
-            
         }, label: {
-            
             VStack {
                 Image(systemName: image)
                 Text(themeTitle)
@@ -60,7 +48,6 @@ struct ContentView: View {
             }
         })
     }
-    
     
     var cards: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum:adaptiveSize))]){
@@ -77,10 +64,6 @@ struct ContentView: View {
     }
 }
 
-
-
-
-
 struct CardView: View {
     let content: String
     @State var isFaceUp: Bool = false
@@ -95,7 +78,6 @@ struct CardView: View {
             }
             .opacity(isFaceUp ? 1 : 0)
             base.fill().opacity(isFaceUp ? 0: 1)
-            
         }
         .onTapGesture {
             isFaceUp.toggle()
