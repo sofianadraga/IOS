@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Memorize
-//
-//  Codes from CS193P Instructor, modified by Chenqin Zhang on 2024/03/19
-//
-
 import SwiftUI
 
 struct EmojiMemoryGameView: View {
