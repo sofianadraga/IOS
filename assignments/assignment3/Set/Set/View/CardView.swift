@@ -1,10 +1,3 @@
-//
-//  CardView.swift
-//  Set
-//
-//  Created by Chenqin zhang on 2024/1/3.
-//
-
 import SwiftUI
 
 struct CardView: View {
