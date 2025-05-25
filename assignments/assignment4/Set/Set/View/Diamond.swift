@@ -1,10 +1,3 @@
-//
-//  Diamond.swift
-//  Set
-//
-//  Created by Chenqin zhang on 2024/2/21.
-//
-
 import SwiftUI
 
 struct Diamond: Shape {
