@@ -1,10 +1,3 @@
-//
-//  ThemeChooserView.swift
-//  MemorizeThemes
-//
-//  Created by Chenqin zhang on 2024/3/31.
-//
-
 import SwiftUI
 
 struct ThemeChooserView: View {
@@ -12,7 +5,6 @@ struct ThemeChooserView: View {
     @ObservedObject var themeChooser: ThemeChooser
     @State private var showCursorTheme = false
     @State private var selectedTheme: Theme?
-//    @State private var emptyTheme = Theme(name: "", emojis: "🍶🍲", nPairs: 2, color: RGBA(color: .black))
     
     var body: some View {
         
