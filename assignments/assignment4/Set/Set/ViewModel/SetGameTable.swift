@@ -1,10 +1,3 @@
-//
-//  SetGame.swift
-//  Set
-//
-//  Created by Chenqin zhang on 2024/2/17.
-//
-
 import Foundation
 import SwiftUI
 
@@ -23,15 +16,6 @@ class SetGameTable: ObservableObject {
         game.shuffle()
         
     }
-    
-//    func isDealt(_ card: SetGame.Card) -> Bool {
-//        return displayCards.contains(card.id) || discardCardsId.contains(card.id)
-//    }
-//    
-//    var undealtCards: [SetGame.Card] {
-//        cards.filter { !isDealt($0) }
-//    }
-    
     
     func shuffleDisplayCards() {
         game.shuffleDisplayCards()
@@ -94,11 +78,6 @@ class SetGameTable: ObservableObject {
     }
     
     
-//    func removeMatchSet(){
-//        game.removeMatchingSet()
-//    }
-    
-    
     func getDisplayCardsArray() -> [SetGame.Card]{
         return game.displayCards
     }
@@ -124,9 +103,6 @@ class SetGameTable: ObservableObject {
         cards.filter { !isDealt($0) }
     }
     
-//    var discardCards: [SetGame.Card] {
-//        cards.filter { game.discardCardsId.contains($0.id) }
-//    }
     
     var discardCards: [SetGame.Card] {
         game.discardCards
