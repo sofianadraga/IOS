@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Set
-//
-//  Created by Chenqin zhang on 2024/1/2.
-//
-
 import SwiftUI
 
 struct SetGameView: View {
@@ -13,8 +6,6 @@ struct SetGameView: View {
     private let aspectRatio: CGFloat = 1.25
     private let deckWidth: CGFloat = 50
     
-//    private let dealAnimation: Animation = .easeInOut(duration: 1)
-//    private let dealInterval: TimeInterval = 0.15
     var body: some View {
         ZStack {
             
