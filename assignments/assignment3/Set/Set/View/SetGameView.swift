@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Set
-//
-//  Created by Chenqin zhang on 2024/1/2.
-//
-
 import SwiftUI
 
 struct SetGameView: View {
