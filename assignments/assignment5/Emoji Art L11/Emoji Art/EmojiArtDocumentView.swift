@@ -1,11 +1,3 @@
-//
-//  EmojiArtDocumentView.swift
-//  Emoji Art
-//
-//  Created by CS193p Instructor on 5/8/23.
-//  Copyright (c) 2023 Stanford University
-//
-
 import SwiftUI
 
 struct EmojiArtDocumentView: View {
