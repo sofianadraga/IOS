@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Memorize
-//
-//  Codes from CS193P Instructor, modified by Chenqin Zhang on 2024/03/19
-//
-
 import SwiftUI
 
 struct EmojiMemoryGameView: View {
@@ -13,8 +6,6 @@ struct EmojiMemoryGameView: View {
         
     var body: some View {
         VStack {
-//            Text(viewModel.theme.name)
-//                .font(.title)
             ScrollView{
                 cards
                     .animation(.default, value: viewModel.cards)
