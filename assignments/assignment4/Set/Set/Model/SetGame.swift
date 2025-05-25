@@ -1,10 +1,3 @@
-//
-//  Card.swift
-//  Set
-//
-//  Created by Chenqin zhang on 2024/2/8.
-//
-
 import Foundation
 import SwiftUI
 
