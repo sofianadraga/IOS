@@ -1,11 +1,3 @@
-//
-//  EmojiArtDocument.swift
-//  Emoji Art
-//
-//  Created by CS193p Instructor on 5/8/23.
-//  Copyright (c) 2023 Stanford University
-//
-
 import SwiftUI
 
 class EmojiArtDocument: ObservableObject {
@@ -26,7 +18,6 @@ class EmojiArtDocument: ObservableObject {
         emojiArt.background
     }
     
-    // MARK: - Intent(s)
     
     func setBackground(_ url: URL?) {
         emojiArt.background = url
