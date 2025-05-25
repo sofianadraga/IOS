@@ -1,11 +1,3 @@
-//
-//  Extension.swift
-//  Emoji Art
-//
-//  Created by CS193p Instructor on 5/8/23.
-//  Copyright (c) 2023 Stanford University
-//
-
 import SwiftUI
 
 typealias CGOffset = CGSize
@@ -29,12 +21,9 @@ extension CGOffset {
 }
 
 extension String {
-    // removes any duplicate Characters
-    // preserves the order of the Characters
+
     var uniqued: String {
-        // not super efficient
-        // would only want to use it on small(ish) strings
-        // and we wouldn't want to call it in a tight loop or something
+
         reduce(into: "") { sofar, element in
             if !sofar.contains(element) {
                 sofar.append(element)
