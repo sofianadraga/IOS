@@ -1,11 +1,3 @@
-//
-//  PaletteStore.swift
-//  Emoji Art
-//
-//  Created by CS193p Instructor on 5/10/23.
-//  Copyright (c) 2023 Stanford University
-//
-
 import SwiftUI
 
 class PaletteStore: ObservableObject {
@@ -42,14 +34,8 @@ class PaletteStore: ObservableObject {
         return index
     }
     
-    // MARK: - Adding Palettes
     
-    // these functions are the recommended way to add Palettes to the PaletteStore
-    // since they try to avoid duplication of Identifiable-ly identical Palettes
-    // by first removing/replacing any Palette with the same id that is already in palettes
-    // it does not "remedy" existing duplication, it just does not "cause" new duplication
-    
-    func insert(_ palette: Palette, at insertionIndex: Int? = nil) { // "at" default is cursorIndex
+    func insert(_ palette: Palette, at insertionIndex: Int? = nil) {
         let insertionIndex = boundsCheckedPaletteIndex(insertionIndex ?? cursorIndex)
         if let index = palettes.firstIndex(where: { $0.id == palette.id }) {
             palettes.move(fromOffsets: IndexSet([index]), toOffset: insertionIndex)
@@ -63,7 +49,7 @@ class PaletteStore: ObservableObject {
         insert(Palette(name: name, emojis: emojis), at: index)
     }
     
-    func append(_ palette: Palette) { // at end of palettes
+    func append(_ palette: Palette) { 
         if let index = palettes.firstIndex(where: { $0.id == palette.id }) {
             if palettes.count == 1 {
                 palettes = [palette]
