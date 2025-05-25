@@ -1,10 +1,3 @@
-//
-//  RGBA.swift
-//  MemorizeThemes
-//
-//  Created by Chenqin zhang on 2024/4/2.
-//
-
 import Foundation
 import SwiftUI
 
