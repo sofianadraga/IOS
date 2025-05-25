@@ -1,10 +1,3 @@
-//
-//  ThemeStore.swift
-//  Memorize
-//
-//  Created by Chenqin zhang on 2024/3/19.
-//
-
 import Foundation
 import SwiftUI
 
@@ -33,8 +26,6 @@ struct ThemeStore {
     
     
     struct Theme: Identifiable, Hashable, Codable {
-        
-        
         var name: String
         var emojis: String
         var nPairs: Int
