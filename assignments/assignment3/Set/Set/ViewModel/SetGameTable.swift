@@ -1,10 +1,3 @@
-//
-//  SetGame.swift
-//  Set
-//
-//  Created by Chenqin zhang on 2024/2/17.
-//
-
 import Foundation
 
 class SetGameTable: ObservableObject {
