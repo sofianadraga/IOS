@@ -1,17 +1,10 @@
-//
-//  CardView.swift
-//  Set
-//
-//  Created by Chenqin zhang on 2024/1/3.
-//
-
 import SwiftUI
 
 struct CardView: View {
     let card: SetGame.Card
     @ObservedObject var setGameTable: SetGameTable
     @State private var isTrembling = false
-//    @State private var isNotMatch = false
+
     
     var body: some View {
         ZStack {
